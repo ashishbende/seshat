@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>380</width>
+    <height>242</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,20 +18,23 @@
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>110</y>
+      <y>60</y>
       <width>75</width>
       <height>23</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mind mapping style of note taking.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
     <property name="text">
-     <string>Mind Maps</string>
+     <string>Mind Map</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>110</y>
+      <y>60</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -44,7 +47,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>110</y>
+      <y>60</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -57,7 +60,7 @@
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>150</y>
+      <y>110</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -69,21 +72,26 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>70</y>
-      <width>141</width>
-      <height>31</height>
+      <x>110</x>
+      <y>30</y>
+      <width>161</width>
+      <height>21</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+border-color: rgb(0, 255, 127);
+background-color: rgb(0, 0, 0);</string>
+    </property>
     <property name="text">
-     <string>Select your note taking style</string>
+     <string>   Select your note taking style</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>190</y>
+      <x>100</x>
+      <y>150</y>
       <width>171</width>
       <height>16</height>
      </rect>
@@ -98,10 +106,29 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>380</width>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionGet_Help"/>
+    <addaction name="actionCheck_for_updates"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuAbout"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -112,6 +139,36 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionGet_Help">
+   <property name="text">
+    <string>Get Help</string>
+   </property>
+  </action>
+  <action name="actionCheck_for_updates">
+   <property name="text">
+    <string>Check for updates</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About Seshat</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
@@ -124,11 +181,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>199</x>
-     <y>193</y>
+     <y>153</y>
     </hint>
     <hint type="destinationlabel">
      <x>233</x>
-     <y>247</y>
+     <y>241</y>
     </hint>
    </hints>
   </connection>
